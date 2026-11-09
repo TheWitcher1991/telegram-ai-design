@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f5f7">
+  <title>Север — мессенджер</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="desktop">
+    <section class="window" aria-label="Мессенджер Север">
+      <aside class="rail" aria-label="Основная навигация">
+        <div class="brand-mark">с</div>
+        <nav class="rail-nav">
+          <a class="rail-link selected" href="#chats" data-page="chats" aria-label="Чаты"><svg viewBox="0 0 24 24"><path d="M5 5.8A2.8 2.8 0 0 1 7.8 3h8.4A2.8 2.8 0 0 1 19 5.8v7.4a2.8 2.8 0 0 1-2.8 2.8H10l-4.5 3v-3.4A2.8 2.8 0 0 1 3 12.8v-7Z"/><path d="M8 8h8M8 11h5"/></svg><b>3</b></a>
+          <a class="rail-link" href="#calls" data-page="calls" aria-label="Звонки"><svg viewBox="0 0 24 24"><path d="M7 3.5h3l1.5 4-2 1.7a15 15 0 0 0 5.3 5.3l1.7-2 4 1.5v3c0 1.1-.9 2-2 2C10.5 19 5 13.5 5 6.5c0-1.7.8-3 2-3Z"/></svg></a>
+          <a class="rail-link" href="#saved" data-page="saved" aria-label="Сохранённое"><svg viewBox="0 0 24 24"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-3.7L6 21V4.5Z"/></svg></a>
+          <a class="rail-link" href="#settings" data-page="settings" aria-label="Настройки"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.2.9-1.2 2.1-1.4-.6a8 8 0 0 1-1.7 1l-.2 1.5h-2.4l-.3-1.5a8 8 0 0 1-1.8-1l-1.3.6-1.2-2.1 1.2-.9a7 7 0 0 1 0-2l-1.2-.9 1.2-2.1 1.4.6a8 8 0 0 1 1.7-1l.2-1.5h2.4l.3 1.5a8 8 0 0 1 1.8 1l1.3-.6 1.2 2.1-1.2.9a7 7 0 0 1-.1 1.9Z" transform="translate(-1 -1)"/></svg></a>
+        </nav>
+        <div class="rail-bottom"><div class="avatar avatar-you">А</div></div>
+      </aside>
+
+      <aside class="inbox" id="chats">
+        <header class="inbox-header">
+          <div><h1>Сообщения</h1></div>
+          <button type="button" class="icon-button compose" data-action="new-chat" aria-label="Новое сообщение">＋</button>
+        </header>
+        <label class="search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></svg><input id="chat-search" type="search" placeholder="Поиск"><kbd>⌘ K</kbd></label>
+        <div class="filter-row"><button type="button" class="filter active" data-filter="all">Все <em>12</em></button><button type="button" class="filter" data-filter="personal">Личные</button><button type="button" class="filter" data-filter="group">Группы</button></div>
+        <div class="chat-list">
+          <a class="chat-item active" href="#chat" data-chat="team" data-kind="group">
+            <div class="avatar avatar-sun">✳</div><div class="chat-copy"><div class="chat-heading"><strong>Команда «Север»</strong><time>14:32</time></div><div class="chat-preview"><span><b>Вы:</b> Макет уже в папке, посмотрите</span><span class="unread">2</span></div></div>
+          </a>
+          <a class="chat-item" href="#masha" data-chat="masha" data-kind="personal"><div class="avatar avatar-masha">М<span class="online"></span></div><div class="chat-copy"><div class="chat-heading"><strong>Маша Воронцова</strong><time>14:18</time></div><div class="chat-preview"><span>Тогда до встречи у входа ☕</span><span class="read">✓✓</span></div></div></a>
+          <a class="chat-item" href="#design" data-chat="design" data-kind="group"><div class="avatar avatar-design">◈</div><div class="chat-copy"><div class="chat-heading"><strong>Дизайн-среда</strong><time>13:56</time></div><div class="chat-preview"><span>Илья: оставил комментарии в файле</span><span class="muted-count">5</span></div></div></a>
+          <a class="chat-item" href="#dad" data-chat="dad" data-kind="personal"><div class="avatar avatar-dad">П</div><div class="chat-copy"><div class="chat-heading"><strong>Папа</strong><time>12:41</time></div><div class="chat-preview"><span>Фотография</span><span>▧</span></div></div></a>
+          <a class="chat-item" href="#walk" data-chat="walk" data-kind="group"><div class="avatar avatar-walk">⌁</div><div class="chat-copy"><div class="chat-heading"><strong>На выходных в Питере</strong><time>11:09</time></div><div class="chat-preview"><span>Лена присоединилась к группе</span><span class="muted-count">18</span></div></div></a>
+          <a class="chat-item" href="#saved" data-chat="saved" data-kind="personal"><div class="avatar avatar-saved">⌑</div><div class="chat-copy"><div class="chat-heading"><strong>Сохранённое</strong><time>Вчера</time></div><div class="chat-preview"><span>Ссылка · Гайд по типографике</span></div></div></a>
+          <a class="chat-item" href="#oleg" data-chat="oleg" data-kind="personal"><div class="avatar avatar-oleg">О</div><div class="chat-copy"><div class="chat-heading"><strong>Олег Крылов</strong><time>Вчера</time></div><div class="chat-preview"><span>Спасибо, получил документы</span></div></div></a>
+        </div>
+        <footer class="inbox-footer"><span class="sync-dot"></span> Все сообщения синхронизированы</footer>
+      </aside>
+
+      <section class="conversation" id="chat" aria-label="Переписка: Команда Север">
+        <header class="conversation-header">
+          <div class="group-avatar">✳</div><div class="conversation-title"><strong>Команда «Север»</strong><span>8 участников · 3 в сети</span></div>
+          <div class="header-actions"><button type="button" class="icon-button" data-action="search-message" aria-label="Поиск в чате"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4 4"/></svg></button><button type="button" class="icon-button" data-action="call" aria-label="Звонок"><svg viewBox="0 0 24 24"><path d="M7 3.5h3l1.5 4-2 1.7a15 15 0 0 0 5.3 5.3l1.7-2 4 1.5v3c0 1.1-.9 2-2 2C10.5 19 5 13.5 5 6.5c0-1.7.8-3 2-3Z"/></svg></button><button type="button" class="icon-button" data-action="details" aria-label="Информация"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg></button></div>
+        </header>
+        <div class="messages">
+          <div class="day-divider"><span>Сегодня</span></div>
+          <div class="message-row"><div class="avatar avatar-ilya small">И</div><div class="message-content"><span class="sender">Илья Соколов</span><div class="bubble">Всем доброе утро! Собрал новую версию экранов. Посмотрите, пожалуйста, до созвона.</div><time>10:04</time></div></div>
+          <div class="message-row"><div class="avatar avatar-masha small">М</div><div class="message-content"><span class="sender">Маша Воронцова</span><div class="bubble">Доброе! Очень нравится направление с боковой панелью. ✨</div><time>10:12</time></div></div>
+          <div class="message-row"><div class="avatar avatar-you small">А</div><div class="message-content own"><div class="bubble">Да, стало гораздо чище. Я сегодня поправлю состояния списка и пришлю ссылку.</div><time>10:16 <span class="read">✓✓</span></time></div></div>
+          <div class="message-row"><div class="avatar avatar-dima small">Д</div><div class="message-content"><span class="sender">Дима Беляев</span><div class="bubble">Заодно обсудим, как назовём каналы? «Комнаты» звучит по-домашнему.</div><time>10:19</time></div></div>
+          <div class="message-row"><div class="avatar avatar-masha small">М</div><div class="message-content"><span class="sender">Маша Воронцова</span><div class="bubble">Мне нравится! И привычные «чаты» тоже можно оставить.</div><time>10:23</time></div></div>
+          <div class="message-row"><div class="avatar avatar-ilya small">И</div><div class="message-content"><span class="sender">Илья Соколов</span><div class="bubble file-bubble"><span class="file-icon">↗</span><span><b>sever-ui-v3.fig</b><small>Макет · 8,4 МБ</small></span><button type="button" data-action="download-file" aria-label="Скачать макет">↓</button></div><time>11:02</time></div></div>
+          <div class="message-row"><div class="avatar avatar-you small">А</div><div class="message-content own"><div class="bubble">Макет уже в папке, посмотрите. На созвоне пройдёмся по мелочам.</div><time>14:32 <span class="read">✓✓</span></time></div></div>
+        </div>
+        <div class="composer-wrap"><div class="reply-context"><span>↳</span> Ответ в «Команда Север»</div><form class="composer"><button type="button" aria-label="Прикрепить файл" class="attach">＋</button><input id="file-input" type="file" hidden><input class="composer-input" type="text" placeholder="Сообщение…" aria-label="Текст сообщения" autocomplete="off"><button type="button" aria-label="Добавить смайлик" class="emoji">☺</button><button type="submit" class="send" aria-label="Отправить"><svg viewBox="0 0 24 24"><path d="m4 4 17 8-17 8 2-7 9-1-9-1-2-7Z"/></svg></button></form></div>
+      </section>
+      <aside class="details"><button type="button" class="close-details" data-action="close-details" aria-label="Закрыть">×</button><div class="details-hero"><div class="group-avatar large">✳</div><h2>Команда «Север»</h2><p>Группа · 8 участников</p><div class="detail-actions"><button type="button" data-action="detail-search"><span>⌕</span>Поиск</button><button type="button" data-action="detail-members"><span>♧</span>Участники</button><button type="button" data-action="detail-call"><span>♧</span>Звонок</button></div></div><div class="detail-section"><div class="section-label">УЧАСТНИКИ <span>8</span><b>Все →</b></div><div class="member"><div class="avatar avatar-ilya tiny">И</div><span>Илья Соколов<small>создатель</small></span><i class="online"></i></div><div class="member"><div class="avatar avatar-masha tiny">М</div><span>Маша Воронцова<small>в сети</small></span><i class="online"></i></div><div class="member"><div class="avatar avatar-you tiny">А</div><span>Александр<small>это вы</small></span></div><div class="member"><div class="avatar avatar-dima tiny">Д</div><span>Дима Беляев<small>был недавно</small></span></div></div><div class="detail-section shared"><div class="section-label">ОБЩИЕ ФАЙЛЫ <b>Все →</b></div><div class="shared-file"><span class="file-mini purple">F</span><span><b>sever-ui-v3.fig</b><small>Сегодня, 11:02 · 8,4 МБ</small></span></div><div class="shared-file"><span class="file-mini blue">PDF</span><span><b>План на ноябрь.pdf</b><small>Вчера · 1,2 МБ</small></span></div></div></aside>
+    </section>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="dialog-root"></div>
+  <script src="app.js"></script>
+</body>
+</html>
